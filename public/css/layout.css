@@ -1,0 +1,36 @@
+.container-gallery {
+    position: relative;
+    overflow: auto;
+    padding: 10px 20px;
+    max-width: 968;
+    margin: 0 auto;
+}
+
+.section-gallery {
+    padding: 40px 50px;
+}
+
+.section-gallery .flex-space-between {
+    align-items: flex-end;
+}
+
+.flex-space-between {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.flex-item-4 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+}

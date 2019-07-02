@@ -1,0 +1,114 @@
+.login-wrapper button:first-child {
+    margin-right: 15px;
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn-transparent {
+    background-color: transparent;
+    border: 1px solid #43A6C3;
+    color: #43A6C3;
+}
+
+
+/*Button transparent effects*/
+
+.btn-transparent-effect::before {
+    border-bottom: 1px solid #385170;
+    border-left: 1px solid #385170;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+
+.btn-transparent-effect::after {
+    border-top: 1px solid #385170;
+    border-right: 1px solid #385170;
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+}
+
+.btn.btn-transparent-effect::before,
+.btn.btn-transparent-effect::after {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transition: 0.4s cubic-bezier(0.25, 0.1, 0.2, 1);
+    -webkit-transition: 0.4s cubic-bezier(0.25, 0.1, 0.2, 1);
+}
+
+.btn.btn-transparent-effect:hover {
+    border: 1px solid #385170;
+    color: #385170;
+}
+
+.btn.btn-transparent-effect:hover::after,
+.btn.btn-transparent-effect:hover::before {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.btn-orange {
+    background-color: #43A6C3;
+    color: #FFFFFF;
+    border: 1px solid #43A6C3;
+}
+
+.btn-orange:hover {
+    border-color: #385170;
+}
+
+
+/*Button filled effects*/
+
+.btn-filled-effect {
+    color: #fff;
+    font-size: 14px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-filled-effect:before,
+.btn-filled-effect:after {
+    position: absolute;
+    content: "";
+    display: block;
+}
+
+.btn-filled-effect:before {
+    top: -120px;
+    left: 50px;
+    z-index: -1;
+    width: calc(100% + 140px);
+    height: 100px;
+    transition: 0.4s cubic-bezier(0.25, 0.1, 0.2, 1);
+    -webkit-transform: skew(70deg);
+    transform: skew(70deg);
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-filled-effect:after {
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.btn-filled-effect:hover:before {
+    left: -50px;
+    top: -20px;
+}
