@@ -21,6 +21,13 @@
     align-items: center;
 }
 
+.flex-justify-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .container-header {
     display: flex;
     align-items: center;
@@ -33,4 +40,15 @@
     width: 40%;
     align-items: center;
     justify-content: center;
+    margin-bottom: 70px;
+    margin-top: 40px;
+}
+
+
+/* .flex-item-4 img {
+    margin-top: 70px;
+} */
+
+.container-profile {
+    padding: 80px 50px;
 }

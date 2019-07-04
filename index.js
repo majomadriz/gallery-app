@@ -3,6 +3,8 @@ const path = require('path');
 const port = 8080;
 var galleries = require('./mock/galleriesMock');
 
+var appRoutes = require('./routes');
+
 const folder = path.join(__dirname, 'public');
 
 // Creating server
@@ -16,11 +18,13 @@ app.use(function(req, res, next) {
     console.log(req.body);
     next();
 });
-
+appRoutes(app);
 app.get('/galleries', function(req, res) {
     console.log(galleries);
     res.json(galleries);
 });
+
+app.use
 
 app.get('*', function(req, res) {
     res.sendFile(path.join(folder, '404.html'));
