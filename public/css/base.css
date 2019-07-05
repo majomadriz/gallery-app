@@ -91,3 +91,8 @@ img {
     text-align: center;
     margin: 0;
 }
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
